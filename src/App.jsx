@@ -3,89 +3,90 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Camera, Palette, PenTool, Quote, ShieldCheck, Sparkles } from "lucide-react";
 
 const navLinks = ["Anasayfa", "Hizmetler", "Çalışmalarımız", "Sanatçı", "İletişim"];
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 // Kullanıcının yüklediği fotoğraflar için public/gallery/ klasörüne referans veriyoruz.
 const gallery = [
   {
     title: "Colorful Portrait",
     desc: "Renk geçişlerinin mükemmel uyumuyla modern ve soyut portre dövmesi.",
-    image: "/gallery/1.jpg"
+    image: publicAsset("gallery/1.jpg")
   },
   {
     title: "Axin Lettering",
     desc: "Estetik yazı karakterleri ve kırmızı ince çizgilerle harf sanatı.",
-    image: "/gallery/2.jpg"
+    image: publicAsset("gallery/2.jpg")
   },
   {
     title: "İsa (Jesus) Realism",
     desc: "Detaylı gölgelendirmelerle işlenmiş dini motif ve realistik portre çalışması.",
-    image: "/gallery/3.jpg"
+    image: publicAsset("gallery/3.jpg")
   },
   {
     title: "Black & Grey Doberman",
     desc: "Siyah ve gri tonlamalı, çarpıcı ve detaylı Doberman figürü çalışması.",
-    image: "/gallery/4.jpg"
+    image: publicAsset("gallery/4.jpg")
   },
   {
     title: "Melek (Archangel)",
     desc: "Mitolojik ve klasik esintilerle, güçlü gölgelere sahip melek dövmesi tasarımı.",
-    image: "/gallery/5.jpg"
+    image: publicAsset("gallery/5.jpg")
   },
   {
     title: "Roman Spartan Sleeve",
     desc: "Kolezyum ve antik Spartalı savaşçı miğferi temalı detaylı kol kaplama çalışması.",
-    image: "/gallery/8.jpg"
+    image: publicAsset("gallery/8.jpg")
   },
   {
     title: "Scripture Lion",
     desc: "'İyi bir yara izi, en iyi nasihatten daha değerlidir...' yazılı illüstratif aslan portresi.",
-    image: "/gallery/9.jpg"
+    image: publicAsset("gallery/9.jpg")
   },
   {
     title: "Medieval Dagger",
     desc: "Barok yaprak desenleri ve gölgelendirmelerle işlenmiş antik kılıç dövmesi.",
-    image: "/gallery/10.jpg"
+    image: publicAsset("gallery/10.jpg")
   },
   {
     title: "Zeus & Eagle",
     desc: "Siyah ve gri tonlamalı, antik Yunan tanrısı Zeus ve kartal figürlü kol dövmesi.",
-    image: "/gallery/11.jpg"
+    image: publicAsset("gallery/11.jpg")
   },
   {
     title: "Keffiyeh Portrait",
     desc: "Yüzü puşi ile örtülü kadın ve barış işareti figürlü kol dövmesi çalışması.",
-    image: "/gallery/12.jpg"
+    image: publicAsset("gallery/12.jpg")
   },
   {
     title: "Drama Masks Woman",
     desc: "Tiyatro maskeleri ve detaylı kadın portresi temalı siyah-gri dövme tasarımı.",
-    image: "/gallery/13.jpg"
+    image: publicAsset("gallery/13.jpg")
   },
   {
     title: "Eye & Loyalty Script",
     desc: "'Blood makes you related...' yazılı, her şeyi gören göz ve bulut desenli çalışma.",
-    image: "/gallery/14.jpg"
+    image: publicAsset("gallery/14.jpg")
   },
   {
     title: "The Last Supper",
     desc: "Leonardo da Vinci'nin Son Akşam Yemeği tablosunun kol üzerine realistik uygulaması.",
-    image: "/gallery/15.jpg"
+    image: publicAsset("gallery/15.jpg")
   },
   {
     title: "Doves & Sacred Heart",
     desc: "Sema eden güvercinler, ışık hüzmeleri ve alevli kutsal kalp temalı kompozisyon.",
-    image: "/gallery/16.jpg"
+    image: publicAsset("gallery/16.jpg")
   },
 
   {
     title: "Zeus with Lion Helmet",
     desc: "Aslan başlı miğfer giyen Zeus/Poseidon figürlü realistik omuz dövmesi.",
-    image: "/gallery/18.jpg"
+    image: publicAsset("gallery/18.jpg")
   },
   {
     title: "Eye, Clock & Rose",
     desc: "Zaman akışı, her şeyi gören göz ve gül detaylı sürrealist kol kaplama dövmesi.",
-    image: "/gallery/19.jpg"
+    image: publicAsset("gallery/19.jpg")
   }
 ];
 
@@ -239,7 +240,7 @@ function Hero() {
         >
           <div className="space-y-4 pt-12">
             <div className="aspect-[4/5] bg-zinc-900 border border-white/10 p-2 overflow-hidden group">
-               <img src="/gallery/1.jpg" alt="Tattoo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
+               <img src={publicAsset("gallery/1.jpg")} alt="Tattoo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
             </div>
             <div className="aspect-square bg-[#111] border border-[#D4AF37]/30 flex flex-col items-center justify-center p-6 text-center">
                <ShieldCheck className="text-[#D4AF37] w-10 h-10 mb-4" />
@@ -253,7 +254,7 @@ function Hero() {
                <span className="text-white group-hover:text-black font-bold uppercase tracking-widest text-xs relative z-10 transition-colors">Özel<br/>Tasarım</span>
             </div>
             <div className="aspect-[4/5] bg-zinc-900 border border-white/10 p-2 overflow-hidden group">
-               <img src="/gallery/2.jpg" alt="Tattoo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
+               <img src={publicAsset("gallery/2.jpg")} alt="Tattoo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
             </div>
           </div>
         </motion.div>
@@ -556,7 +557,7 @@ function Contact() {
               <h3 className="text-xl font-bold uppercase tracking-wider text-[#D4AF37] mb-4">Stüdyomuz</h3>
               <div className="aspect-[16/10] w-full rounded-lg overflow-hidden border border-white/10 relative group">
                 <img 
-                  src="/exterior.jpg" 
+                  src={publicAsset("exterior.jpg")} 
                   alt="Aslan Tattoo Studio Girişi" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
