@@ -2,33 +2,34 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Camera, Palette, PenTool, Quote, ShieldCheck, Sparkles } from "lucide-react";
 
 const navLinks = ["Anasayfa", "Hizmetler", "Çalışmalarımız", "Sanatçı", "İletişim"];
+const baseUrl = import.meta.env.BASE_URL;
 
 // Kullanıcının yüklediği fotoğraflar için public/gallery/ klasörüne referans veriyoruz.
 const gallery = [
   {
     title: "Colorful Portrait",
     desc: "Özel Tasarım Renkli Portre",
-    image: "/gallery/1.jpg"
+    image: `${baseUrl}gallery/1.jpg`
   },
   {
     title: "Black & Grey Doberman",
     desc: "Yazı ve Figür Tasarımı",
-    image: "/gallery/2.jpg"
+    image: `${baseUrl}gallery/2.jpg`
   },
   {
     title: "İsa (Jesus) Realism",
     desc: "İnce İşçilikli Dini Motif",
-    image: "/gallery/3.jpg"
+    image: `${baseUrl}gallery/3.jpg`
   },
   {
     title: "Melek (Archangel)",
     desc: "Mitolojik & Melek Tasarımı",
-    image: "/gallery/4.jpg"
+    image: `${baseUrl}gallery/4.jpg`
   },
   {
     title: "Axin Lettering",
     desc: "Kırmızı Harf Detayları",
-    image: "/gallery/5.jpg"
+    image: `${baseUrl}gallery/5.jpg`
   }
 ];
 
@@ -163,7 +164,7 @@ function Hero() {
         >
           <div className="space-y-4 pt-12">
             <div className="aspect-[4/5] bg-zinc-900 border border-white/10 p-2 overflow-hidden group">
-               <img src="/gallery/1.jpg" alt="Tattoo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
+               <img src={`${baseUrl}gallery/1.jpg`} alt="Tattoo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
             </div>
             <div className="aspect-square bg-[#111] border border-[#D4AF37]/30 flex flex-col items-center justify-center p-6 text-center">
                <ShieldCheck className="text-[#D4AF37] w-10 h-10 mb-4" />
@@ -177,7 +178,7 @@ function Hero() {
                <span className="text-white group-hover:text-black font-bold uppercase tracking-widest text-xs relative z-10 transition-colors">Özel<br/>Tasarım</span>
             </div>
             <div className="aspect-[4/5] bg-zinc-900 border border-white/10 p-2 overflow-hidden group">
-               <img src="/gallery/2.jpg" alt="Tattoo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
+               <img src={`${baseUrl}gallery/2.jpg`} alt="Tattoo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
             </div>
           </div>
         </motion.div>
